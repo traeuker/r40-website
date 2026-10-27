@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>R40</title>
+<meta name="description" content="Red-teaming the defences of frontier AI.">
+<link rel="canonical" href="https://r40.org/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="R40">
+<meta property="og:description" content="Red-teaming the defences of frontier AI.">
+<meta property="og:url" content="https://r40.org/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@800&display=swap">
+<style>
+/* Layout: a plain left-aligned column, like a researcher's homepage. One serif does all the reading; colour lives only in the logo. */
+:root{
+  --bg:#ffffff;
+  --ink:#1b1b1d;
+  --muted:#6a6a70;
+  --rule:#e4e4e7;
+  --red:#b3121a;
+  --f-text:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-logo:"Archivo","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121214;--ink:#e9e8e6;--muted:#9a999f;--rule:#2a2a2e;--red:#ff5a5f;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121214;--ink:#e9e8e6;--muted:#9a999f;--rule:#2a2a2e;--red:#ff5a5f;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-text);font-size:19px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration-color:var(--muted);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:620px;margin:0 auto;padding-block:0 40px}
+
+header{padding-block:56px 0;min-height:110px}
+
+.logo{display:inline-flex;align-items:center;text-decoration:none;color:var(--ink);line-height:1;font:800 30px var(--f-logo);letter-spacing:-.045em}
+
+main{display:grid;gap:28px;padding-top:24px}
+h1{font-weight:400;font-size:clamp(26px,4.2vw,32px);line-height:1.25;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+.work{color:var(--muted)}
+.work a{color:var(--ink)}
+
+.team{margin-top:28px;padding-top:24px;border-top:1px solid var(--rule);display:grid;gap:4px}
+.team div{display:flex;flex-wrap:wrap;gap:0 10px;align-items:baseline}
+.team .role{color:var(--muted)}
+
+footer{margin-top:56px;font-size:15px;color:var(--muted)}
+
+header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink)}
+
+@media (max-width:520px){
+  body{font-size:18px}
+  header{padding-block:36px 0;min-height:90px}
+}
+body{margin:0}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <a class="logo" href="/" aria-label="R40">R40</a>
+  </header>
+
+  <main>
+    <h1 id="tagline">Red-teaming the defences of frontier AI.</h1>
+    <p class="work">Recent work: <a href="https://stolen-thoughts.com" target="_blank" rel="noopener">Stealing Reasoning Traces from Proprietary LLM APIs</a></p>
+  </main>
+
+  <div class="team">
+    <div><a href="https://schaeffer.ai" target="_blank" rel="noopener">Joachim Schaeffer</a><span class="role">Co-founder</span></div>
+    <div><a href="https://www.raeuker.com" target="_blank" rel="noopener">Tilman Räuker</a><span class="role">Co-founder</span></div>
+  </div>
+
+  <footer><span><a href="mailto:hello@r40.org">hello@r40.org</a> · </span>© 2026 R40</footer>
+</div>
+</body>
+</html>
