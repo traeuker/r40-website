@@ -60,6 +60,7 @@ h1{font-weight:400;font-size:clamp(26px,4.2vw,32px);line-height:1.25;margin:0;te
 p{margin:0}
 .work{color:var(--muted)}
 .work a{color:var(--ink)}
+.work .desc{margin-top:6px;font-size:17px;line-height:1.5}
 
 .team{margin-top:28px;padding-top:24px;border-top:1px solid var(--rule);display:grid;gap:4px}
 .team div{display:flex;flex-wrap:wrap;gap:0 10px;align-items:baseline}
@@ -87,8 +88,18 @@ body{margin:0}
 
   <main>
     <h1 id="tagline">Red-teaming the defences of frontier AI.</h1>
-    <p class="work">New: <a href="/papers/kimi-k31-hidden-test-rules/">Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules</a></p>
-    <p class="work">Recent work: <a href="https://stolen-thoughts.com" target="_blank" rel="noopener">Stealing Reasoning Traces from Proprietary LLM APIs</a></p>
+    <div class="work">
+      <p>New: <a href="/papers/kimi-k31-hidden-test-rules/">Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules</a></p>
+      <p class="desc">Kimi K3.1 Pro is the top model on Artificial Analysis’s Terminal-Bench 4.0 leaderboard. In 23% of its attempts, its reasoning cites instructions that are not in the task but that the hidden tests check. Furthermore, in three of four tasks it ignores task edits that contradict these rules, which suggest that Kimi K3.1 was trained on the benchmark tasks with a teacher that saw the hidden grading rules.</p>
+    </div>
+    <div class="work">
+      <p>Update, September 2026: <a href="https://stolen-thoughts.com/stolen_thoughts_update.pdf" target="_blank" rel="noopener">Adversaries Can Still Steal Reasoning from American Frontier Models via Third-Party Cloud Aggregators</a></p>
+      <p class="desc">Two months after our disclosure, we audit the mitigations deployed on the OpenAI and Anthropic APIs and on AWS Bedrock, Microsoft Azure, and OpenRouter. The patches are fragmented and reach third-party clouds with a delay of days. Reasoning replay still works on Azure for every OpenAI model, and scratchpad extraction still works for every OpenAI model, Opus 4.8, and Sonnet 5.</p>
+    </div>
+    <div class="work">
+      <p>Recent work: <a href="https://stolen-thoughts.com" target="_blank" rel="noopener">Stealing Reasoning Traces from Proprietary LLM APIs</a></p>
+      <p class="desc">Anthropic, OpenAI, and Google return encrypted chain-of-thought blocks to clients, and these blocks can be replayed across sessions, users, and models. We replay a frontier model’s encrypted trace into a weaker model from the same provider, which then transcribes the hidden reasoning in plaintext. The attack never targets the stronger model directly and therefore does not trigger its anti-distillation safeguards.</p>
+    </div>
   </main>
 
   <div class="team">
