@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules · Schaeffer &amp; Räuker · R40</title>
+<meta name="description" content="Kimi K3.1 Pro cites hidden Terminal-Bench 4.0 grading rules in 23% of attempts and ignores task edits that contradict them. By Joachim Schaeffer and Tilman Räuker, R40 Research.">
+<link rel="canonical" href="https://r40.org/papers/kimi-k31-hidden-test-rules/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="citation_title" content="Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules">
+<meta name="citation_author" content="Schaeffer, Joachim">
+<meta name="citation_author_institution" content="R40 Research">
+<meta name="citation_author" content="Räuker, Tilman">
+<meta name="citation_author_institution" content="R40 Research">
+<meta name="citation_publication_date" content="2026/11/03">
+<meta name="citation_technical_report_institution" content="R40 Research">
+<meta name="citation_pdf_url" content="https://r40.org/papers/kimi_k31_benchmark_audit.pdf">
+<meta property="og:title" content="Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules">
+<meta property="og:description" content="Kimi K3.1 Pro cites hidden Terminal-Bench 4.0 grading rules in 23% of attempts and ignores task edits that contradict them. By Joachim Schaeffer and Tilman Räuker, R40 Research.">
+<meta property="og:url" content="https://r40.org/papers/kimi-k31-hidden-test-rules/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://r40.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules","datePublished":"2026-11-03","url":"https://r40.org/papers/kimi-k31-hidden-test-rules/",
+"author":[{"@type":"Person","name":"Joachim Schaeffer","url":"https://schaeffer.ai","affiliation":{"@type":"Organization","name":"R40 Research"}},
+{"@type":"Person","name":"Tilman Räuker","alternateName":["Tilman Raeuker","Tilman Rauker"],"url":"https://www.raeuker.com","affiliation":{"@type":"Organization","name":"R40 Research"}}],
+"publisher":{"@type":"Organization","name":"R40","url":"https://r40.org/"},
+"keywords":["Kimi K3.1","Kimi K3.1 Pro","Moonshot AI","Terminal-Bench","Humanity's Last Exam","HLE","benchmaxxing","benchmark contamination","AI evaluation"],
+"encoding":{"@type":"MediaObject","contentUrl":"https://r40.org/papers/kimi_k31_benchmark_audit.pdf","encodingFormat":"application/pdf"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@800&display=swap">
+<style>
+/* Layout: a plain left-aligned column, like a researcher's homepage. One serif does all the reading; colour lives only in the logo. */
+:root{
+  --bg:#ffffff;
+  --ink:#1b1b1d;
+  --muted:#6a6a70;
+  --rule:#e4e4e7;
+  --red:#b3121a;
+  --f-text:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-logo:"Archivo","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121214;--ink:#e9e8e6;--muted:#9a999f;--rule:#2a2a2e;--red:#ff5a5f;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121214;--ink:#e9e8e6;--muted:#9a999f;--rule:#2a2a2e;--red:#ff5a5f;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-text);font-size:19px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration-color:var(--muted);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:620px;margin:0 auto;padding-block:0 40px}
+
+header{padding-block:56px 0;min-height:110px}
+
+.logo{display:inline-flex;align-items:center;text-decoration:none;color:var(--ink);line-height:1;font:800 30px var(--f-logo);letter-spacing:-.045em}
+
+main{display:grid;gap:28px;padding-top:24px}
+h1{font-weight:400;font-size:clamp(26px,4.2vw,32px);line-height:1.25;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+.work{color:var(--muted)}
+.work a{color:var(--ink)}
+
+.team{margin-top:28px;padding-top:24px;border-top:1px solid var(--rule);display:grid;gap:4px}
+.team div{display:flex;flex-wrap:wrap;gap:0 10px;align-items:baseline}
+.team .role{color:var(--muted)}
+
+footer{margin-top:56px;font-size:15px;color:var(--muted)}
+
+header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink)}
+
+@media (max-width:520px){
+  body{font-size:18px}
+  header{padding-block:36px 0;min-height:90px}
+}
+body{margin:0}
+
+.meta{color:var(--muted)}
+h2{font-weight:500;font-size:20px;margin:0 0 8px}
+.cite{font:14px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap;color:var(--muted);margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/" aria-label="R40 home">R40</a>
+  </header>
+  <main>
+    <h1>Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules</h1>
+    <p class="meta"><a href="https://schaeffer.ai">Joachim Schaeffer</a> and <a href="https://www.raeuker.com">Tilman Räuker</a> · R40 Research · 3 November 2026</p>
+    <p><a href="/papers/kimi_k31_benchmark_audit.pdf">Read the paper (PDF)</a></p>
+    <section>
+      <h2>Abstract</h2>
+      <p>Kimi K3.1, the top model on Artificial Analysis’s Terminal-Bench 4.0 leaderboard, follows instructions it was never given. In 23% of its attempts, its reasoning cites “instructions” that are not in the task but that the hidden tests check. K3.1 sometimes speculates where these instructions come from, for example “Instructions likely distilled pitfalls from previous agents”. We observed no such behavior for its predecessor, Kimi K3. Its lead over other frontier models on Terminal-Bench 4.0 is concentrated in tasks in which it states hidden grading rules. When prefilling K3.1’s reasoning with a request to list its instructions, K3.1 names hidden requirements in 65% of its answers, K3 in 18%. When we edit a task file to contradict one of these rules, K3.1 ignores the edit and fails the task (in three of four tasks), while other models follow it. K3.1 does follow edits that do not contradict a hidden rule. On HLE, K3.1’s reasoning refers to “previous tasks” or “this platform” on 25% of questions, K3 on 3%, and six Anthropic and OpenAI models on at most 4%. We think these behaviors are most likely signs of training directly on the benchmark tasks with a teacher that saw the hidden grading rules, for example on-policy self-distillation. Our behavioral analysis is compatible with this hypothesis but cannot prove it, nor tell whether such training steps were taken intentionally to raise benchmark scores, known as benchmaxxing.</p>
+    </section>
+    <section>
+      <h2>Cite</h2>
+<pre class="cite">@techreport{schaeffer2026kimi,
+  title       = {Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules},
+  author      = {Schaeffer, Joachim and R{\"a}uker, Tilman},
+  institution = {R40 Research},
+  year        = {2026},
+  month       = nov,
+  url         = {https://r40.org/papers/kimi-k31-hidden-test-rules/}
+}</pre>
+    </section>
+  </main>
+  <footer><span><a href="mailto:hello@r40.org">hello@r40.org</a> · </span>© 2026 R40</footer>
+</div>
+</body>
+</html>
